@@ -33,11 +33,10 @@ export default {
 
    methods: {
       onSave (ev) {
-        console.log("Asdfasdf", ev.model)
         this.$store.commit('edit', ev.model.toJSON())
         alert("Record updated successfully")
-        },
-        onRemove (ev) {
+      },
+      onRemove (ev) {
         this.$store.commit('remove', ev.row)
       }
    

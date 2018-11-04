@@ -24,8 +24,7 @@
     methods: {
       onRemove () {
         this.$store.dispatch('remove',  this.product).then((responce) => {
-            console.log(responce)
-          alert('Product was removed! \n' + JSON.stringify(responce))
+          alert('Product was removed!')
           this.$router.push({name: 'products'})
         }).catch((reason) => {
           alert(reason)

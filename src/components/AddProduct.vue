@@ -1,12 +1,6 @@
 <template>
   <div>
     <ul>
-      <!-- <li>
-        <label>Product ID</label> <span class="hint">(Product ID must be unique! Use the autocomplete to only see the existing IDs and create a unique one.)</span>
-        <br />
-        <kendo-autocomplete :data-source="products" :data-text-field="'ProductID'" v-model="newProduct.ProductID"></kendo-autocomplete>
-      </li> -->
-
       <li>
           <label>Product Name</label>
           <br />
@@ -21,7 +15,7 @@
 
       <li>
         <label>Status</label>
-        <!--<kendo-autocomplete :class="'k-autocomplete'" :width="'120'"  :data-source="status"  v-model="newProduct.Status"></kendo-autocomplete> -->
+       
         <kendo-combobox
                     v-model="newProduct.Status"
                     :placeholder="'Select'"
@@ -72,11 +66,8 @@
       methods: {
        onAdd () {
         this.$store.dispatch('add', this.newProduct).then(response => {
-            console.log(this.newProduct)
-        console.log('Got some user data, now lets show something with it')
-        this.$router.push('/product-view')}, (error) => {
-        console.log('Got nothing for this user except bad news.')
-        })},      
+          this.$router.push('/product-view')}, (error) => {
+       })},      
         onCancel () {
           this.$router.push({name: 'products'})
         }
