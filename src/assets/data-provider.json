@@ -1,0 +1,45 @@
+
+     [
+        {
+          "ProductID": 1,
+          "ProductName": "Chai",
+          "ProductType": "Shopping",
+          "Status": "Sold",
+          "Country": "US"
+        },
+        {
+          "ProductID": 2,
+          "ProductName": "Pen",
+          "ProductType": "consumer",
+          "Status": "fast-filling",
+          "Country": "UK"
+        },
+        {
+          "ProductID": 3,
+          "ProductName": "Car",
+          "ProductType": "Shopping",
+          "Status": "Sold",
+          "Country": "UAE"
+        },
+        {
+          "ProductID": 4,
+          "ProductName": "Mobile",
+          "ProductType": "consumer",
+          "Status": "fast-filling",
+          "Country": "US"
+        },
+        {
+          "ProductID": 5,
+          "ProductName": "Laptop",
+          "ProductType": "consumer",
+          "Status": "Sold",
+          "Country": "UK"
+        },
+        {
+          "ProductID": 6,
+          "ProductName": "Pencil",
+          "ProductType": "Shopping",
+          "Status": "Sold",
+          "Country": "UAE"
+        }
+      ]
