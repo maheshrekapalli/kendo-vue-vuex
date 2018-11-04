@@ -32,7 +32,6 @@
       },
       onChange (ev) {
           this.product = ev.sender.dataItem()
-          console.log(this.product)
       },
       onCancel () {
         this.$router.push({name: 'products'})

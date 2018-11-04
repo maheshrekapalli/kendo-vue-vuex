@@ -75,22 +75,4 @@
     }
   </script>
 
-  <style scoped>
-    li {
-      list-style-type: none;
-      margin-top: 20px;
-    }
-
-    label {
-      font-weight: bold;
-    }
-
-    span.hint {
-      font-size: 12px;
-      font-style: italic;
-    }
-
-    .k-autocomplete.k-header {
-    width: 300px;
-}
-  </style>
+  
