@@ -1,8 +1,7 @@
 <template>
    <div id="vueapp">
  
-        <kendo-grid id="grid" :data-source="products" :editable="'inline'" @save="onSave" @remove="onRemove">
-
+        <kendo-grid id="grid" :data-source="products" :editable="'inline'" :schema="schema" @save="onSave" @remove="onRemove">
             <kendo-grid-column :field="'ProductName'" :title="'Product Name'" :width="150"></kendo-grid-column>
             <kendo-grid-column :field="'ProductType'" :title="'Product Type'" :width="120"></kendo-grid-column>
             <kendo-grid-column :field="'Status'" :title="'Status'" :width="120"></kendo-grid-column>
@@ -19,7 +18,22 @@ export default {
   name: 'products',
   data () {
     return {
-    
+      schema: {
+           model: {
+        ProductName: {
+            type: 'string',
+        },
+        ProductType: {
+            type: 'string',
+        },
+        Status: {
+            type: 'string',
+        },
+        Country: {
+            type: 'string',
+          }
+        } 
+      }
     }
   },
 

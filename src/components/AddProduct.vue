@@ -75,4 +75,18 @@
     }
   </script>
 
+  <style scoped>
+    li {
+      list-style-type: none;
+      margin-top: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    </style>
+    
+  
+
   
