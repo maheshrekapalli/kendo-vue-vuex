@@ -25,11 +25,7 @@ export const store = new Vuex.Store({
     },
     mutations : {
         add (state, product) {
-            console.log("this is add")
-            console.log(product.ProductID)
-            //let len = Object.keys(state.products).length
-            //console.log(len)
-            state.products.sort((a,b) => {
+        state.products.sort((a,b) => {
                 return b.ProductID - a.ProductID
             })
             product.ProductID = state.products[0].ProductID + 1
@@ -39,33 +35,19 @@ export const store = new Vuex.Store({
             state.products.splice(index, 1)
         },
         edit (state, product) {
-            console.log(state, product, state.products)
-            let foundProduct = state.products.find((prod) => {
-
+           let foundProduct = state.products.find((prod) => {
                 return prod.ProductID === product.ProductID
             })
-console.log(foundProduct,"FOUND PRODUCT")
-            var index = state.products.indexOf(foundProduct)
+            let index = state.products.indexOf(foundProduct)
             state.products[index] = product
-            console.log(product)
         },
     },  
 
     actions : {
         add (context, product) {
             return new Promise((resolve, reject) => {
-                // if (context.getters.id.indexOf(product.ProductID) > -1) {
-                //     reject('This product ID exists!')
-                // } else if (product.ProductID === '') {
-                //     reject('product ID cannot be empty!')
-                // } else {
-                //     console.log("this is else")
-                //     context.commit('add', product)
-                //     resolve(context.getters.id.indexOf(product.ProductID))
-                // }
-                    console.log("this is else")
-                    context.commit('add', product)
-                    resolve(context.getters.id.indexOf(product.ProductID))
+                context.commit('add', product)
+                resolve(context.getters.id.indexOf(product.ProductID))
             })
         },
         remove (context, product) {
@@ -75,9 +57,7 @@ console.log(foundProduct,"FOUND PRODUCT")
                 })
 
                 let index = context.state.products.indexOf(foundProduct)
-                console.log(index)
-                console.log("index")
-                if (!product || index < 0 ) {
+               if (!product || index < 0 ) {
                     reject('product not found!')
                 } else {
                     context.commit('remove', index)
